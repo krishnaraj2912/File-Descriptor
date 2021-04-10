@@ -1,13 +1,10 @@
 # File-Descriptor
-###Video Explanation Link:
+### Video Explanation Link:
 https://drive.google.com/file/d/1D3Mv8GzciETwDfaVGfh-UPbddwwNIFF-/view?usp=sharing
 
-###Objective:
-Building a ###c### program 
-Displaying different informations of a file.
-Building a user level lbrary libFS that implements, a good portion of file system.
-This file system links to an application through which we can access files and directories.
-This library will inturn link with a layer that implements a disk.
+### Objective:
+Building a program to display the properties of a file.
+The file is read as a command line argument.
 
-Implementation Details:
-We will make a file system API that has 3 parts. Two of them are generic file system calls that deals with file access and a set of calls that deals with directories.
+### Implementation Details:
+With the help of stat data structure, we create a stat structure and use stat() function to list properties of a file identified by path. It reads all file properties and dumps to buf structure. The function is defined in sys/stat.h header file.
